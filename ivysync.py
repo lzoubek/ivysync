@@ -31,7 +31,7 @@ if __name__ == '__main__':
         episodes = prog.episodes(page_size=9999)
         print('Got %s episodes' % str(len(episodes)))
         for ep in episodes:
-            video = os.path.join(prog_dir, ep.title+'-'+ep.ID+'.mp4')
+            video = os.path.join(prog_dir, ep.ID+'-'+ep.title+'.mp4')
             if os.path.exists(video):
                 continue
             try:
